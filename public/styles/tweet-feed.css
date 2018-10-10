@@ -1,0 +1,125 @@
+
+/* ---------- ARTICLE  ---------- */
+
+#tweets-wrapper article {
+    border-radius: 5px;
+    margin: 0 2em 2em;
+    border: 1px solid #cccccc;
+    display: block;
+}
+
+#tweets-wrapper article.hover {
+    border: 1px solid #555;
+}
+
+
+/* ---------- ARTICLE HEADER ---------- */
+
+#tweets-wrapper article header {
+    background-color: #eeeeee;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 10px 10px;
+    height: 60px;
+    color: #667e85;
+}
+
+#tweets-wrapper article .avatar {
+    width: 40px;
+    height: 40px;
+    background-color: salmon;
+    border-radius: 5px;
+    float: left;
+    margin-right: 10px;
+}
+
+#tweets-wrapper article header {
+    opacity: 0.8;
+}
+
+#tweets-wrapper article header .avatar img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+#tweets-wrapper article.hover header{
+    opacity: 1;
+}
+
+#tweets-wrapper article h2 {
+    display: inline-block;
+    margin: 0;
+} 
+
+#tweets-wrapper article a {
+    float: right;
+    color: #a0a0a0;
+    font-size: 0.8em;
+    line-height: 2.5em;
+    text-decoration: none;
+}
+
+#tweets-wrapper article a:hover {
+    text-decoration: underline;
+}
+
+
+/* ---------- ARTICLE MAIN ---------- */
+
+#tweets-wrapper main {
+    padding: 20px 20px;
+}
+
+#tweets-wrapper main p {
+    line-height: 1.5em;
+}
+
+
+/* ---------- ARTICLE FOOTER ---------- */
+
+#tweets-wrapper article footer {
+    border-top: 1px solid #cccccc;
+    padding: 10px;
+}
+
+#tweets-wrapper article footer span {
+    font-size: 0.8em;
+}
+
+#tweets-wrapper article footer .social {
+    float: right;
+    display: none;
+    opacity: 0.7;
+}
+
+#tweets-wrapper article:hover footer .social {
+    display: block;
+}
+
+#tweets-wrapper article footer .social a {
+    margin-right: 10px;
+    margin-top: 2px;
+    width: 15px;
+    height: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#tweets-wrapper article footer .social a:hover {
+    opacity: 0.7;
+}
+
+#tweets-wrapper article footer .social a.flag {
+    background-image: url('../images/article-flag.png');
+}
+
+#tweets-wrapper article footer .social a.retweet {
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/article-retweet.png');
+}
+
+#tweets-wrapper article footer .social a.like {
+    background-image: url('../images/article-heart.png');
+}
+

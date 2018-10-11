@@ -22,7 +22,7 @@
     line-height: 2.8em;
 }
 
-#nav-bar a.compose {
+#nav-bar .compose {
     position: relative;
     float: right;
     background-color: #fff;
@@ -37,12 +37,12 @@
     opacity: 0.9;
 }
 
-#nav-bar a.compose i {
+#nav-bar .compose i {
     margin-right: 5px;
 }
 
-#nav-bar a.compose:hover,
-#nav-bar a.compose:focus{
+#nav-bar .compose:hover,
+#nav-bar .compose:focus{
     opacity: 1;
     color: #000;
 }

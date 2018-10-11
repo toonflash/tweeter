@@ -35,31 +35,32 @@ $(function() {
     }
   }
 
-  function loadTweets(data) {
+  function loadTweets() {
     $.ajax({
       url: '/tweets',
       method: 'GET',
-      data: data,
       dataType: "json",
       success: function(result){
         renderTweets(result);
       },
       error: function(err){
+        alert("loadTweets failed");
       }
     });
   }
 
   $('#tweetform').on('submit', (e) => {
     e.preventDefault();
+    $( ".error" ).hide();
     let data = $('#tweetform').serialize();
 
     // validation here BEFORE posting
     if($('#tweettext').val()===""){
-      alert("You are empty");
+      $(".error").text("Please make sure you have entered a meowsage and try again.").slideDown();
       return;
     }
     if($('#tweettext').val().length >= 141){
-      alert("You are too full");
+      $(".error").text("Ooops. It looks like you have too many characters in your meowsage. Please keet it within 140 characters and try again.").slideDown();
       return;
     }
 
@@ -70,11 +71,16 @@ $(function() {
       data: data,
       dataType: "json",
       success: function(result){
-      loadTweets(data);
+      $('#tweettext').val(" ");
+      $(".error").slideUp().hide();
+      loadTweets();
     },
       error: function(err){
+        alert("ajax POST request failed");
       }
     });
   });
+
+  loadTweets();
 
 });

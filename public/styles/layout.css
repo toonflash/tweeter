@@ -29,13 +29,9 @@ body {
    color: red;
  }
 
- main.container {
+.container {
    width: 450px;
    margin: 80px auto 0;
    background-color: #fff;
    overflow: auto;
- }
-
- #main-wrapper {
-   display: none;
  }

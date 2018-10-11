@@ -51,17 +51,25 @@ $(function() {
 
   $('#tweetform').on('submit', (e) => {
     e.preventDefault();
-    $( ".error" ).hide();
     let data = $('#tweetform').serialize();
 
     // validation here BEFORE posting
     if($('#tweettext').val()===""){
-      $(".error").text("Please make sure you have entered a meowsage and try again.").slideDown();
+      $(".error").slideUp('fast', function() {
+        $(".error").text("Please make sure you have entered a meowsage and try again.").slideDown();
+      });
+      
       return;
     }
     if($('#tweettext').val().length >= 141){
-      $(".error").text("Ooops. It looks like you have too many characters in your meowsage. Please keet it within 140 characters and try again.").slideDown();
-      return;
+
+      $(".error").slideUp('fast', function() {
+        $(".error").text("Ooops. It looks like you have too many characters in your meowsage. Please keet it within 140 characters and try again.").slideDown();
+      });
+
+      // $(".error").slideUp();
+      // $(".error").text("Ooops. It looks like you have too many characters in your meowsage. Please keet it within 140 characters and try again.").slideDown();
+       return;
     }
 
     // we are go!
@@ -71,9 +79,9 @@ $(function() {
       data: data,
       dataType: "json",
       success: function(result){
-      $('#tweettext').val(" ");
-      $(".error").slideUp().hide();
+      $(".error").slideUp();
       loadTweets();
+      $("#tweetform footer .counter").text(140);
     },
       error: function(err){
         alert("ajax POST request failed");

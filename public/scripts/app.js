@@ -6,11 +6,18 @@
 
 $(function() {
 
+  // Preventing XSS with Escaping function
+  function escape(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
   function createTweetElement(tweet) {
-    var timestamp = moment(tweet.created_at).endOf('day').fromNow();;
+    var timestamp = moment(tweet.created_at).endOf('day').fromNow();
     const $tweet = $("<article>");
-    const $tweetHeader = $(`<header><div class='avatar'><img src= ${tweet.user.avatars.small} /></div><h2>${tweet.user.name}</h2><a>${tweet.user.handle}</a></header>`);
-    const $tweetBody = $(`<main><p>${tweet.content.text}</p></main>`);
+    const $tweetHeader = $(`<header><div class='avatar'><img src= ${escape(tweet.user.avatars.small)} /></div><h2>${escape(tweet.user.name)}</h2><a>${escape(tweet.user.handle)}</a></header>`);
+    const $tweetBody = $(`<main><p>${escape(tweet.content.text)}</p></main>`);
     const $tweetFooter = $(`<footer><span>${timestamp}</span><div class='social'><a class='flag'></a><a class='retweet'></a><a class='like'></a></div></footer>`);
 
     return $tweet.append($tweetHeader).append($tweetBody).append($tweetFooter);

@@ -35,3 +35,7 @@ body {
    background-color: #fff;
    overflow: auto;
  }
+
+ #main-wrapper {
+   display: none;
+ }

@@ -8,7 +8,11 @@
     display: block;
 }
 
-#tweets-wrapper article.hover {
+/* #tweets-wrapper article.hover {
+    border: 1px solid #555;
+} */
+
+#tweets-wrapper article:hover {
     border: 1px solid #555;
 }
 
@@ -27,7 +31,7 @@
 #tweets-wrapper article .avatar {
     width: 40px;
     height: 40px;
-    background-color: salmon;
+    background-color: #00a087;
     border-radius: 5px;
     float: left;
     margin-right: 10px;
@@ -42,7 +46,7 @@
     border-radius: 5px;
 }
 
-#tweets-wrapper article.hover header{
+#tweets-wrapper article:hover header{
     opacity: 1;
 }
 
@@ -72,6 +76,7 @@
 
 #tweets-wrapper main p {
     line-height: 1.5em;
+    word-break: break-word;
 }
 
 

@@ -1,6 +1,6 @@
 
 #tweets-wrapper {
-    /* padding-top: 30px; */
+    padding-top: 30px;
 }
 
 /* ---------- ARTICLE  ---------- */
@@ -13,11 +13,7 @@
 }
 
 #tweets-wrapper article:hover {
-    border: 1px solid #555;
-}
-
-#tweets-wrapper article:first-of-type {
-    margin-top: 30px;
+    border: 1px solid #555555;
 }
 
 

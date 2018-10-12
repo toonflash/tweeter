@@ -25,24 +25,48 @@
 #nav-bar .compose {
     position: relative;
     float: right;
-    background-color: #fff;
+    background-color: #ffffff;
     display: inline-block;
     text-decoration: none;
-    border: 1px solid #000;
+    border: 1px solid #000000;
     border-radius: 5px;
-    padding: 18px 20px;
+    text-align: left;
+    padding-left: 45px;
+    padding-top: 18px;
+    width: 140px;
+    height: 60px;
     color: #00a187;
     margin-top: 10px;
     font-size: 1.2em;
     opacity: 0.9;
 }
 
-#nav-bar .compose i {
-    margin-right: 5px;
+.icon::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+#nav-bar .compose:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f044";
+    position: absolute;
+    left: 18px;
 }
 
-#nav-bar .compose:hover,
-#nav-bar .compose:focus{
+#nav-bar.close .compose:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00d";
+    font-size: 24px;
+    left: 19px;
+    top: 17px;
+}
+
+#nav-bar .compose:hover{
     opacity: 1;
-    color: #000;
+    color: #000000;
 }

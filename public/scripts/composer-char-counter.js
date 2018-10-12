@@ -5,12 +5,13 @@ $(document).ready(function() {
         let counterVal = limit - $(this).val().length;
 
         if (counterVal < 0) {
-            $(this).parentsUntil("#main-wrapper").find('.counter').addClass("red");
+            $(this).parentsUntil("#main-wrapper").find(".counter").addClass("red");
         }
         if (counterVal >= 0) {
-            $(this).parentsUntil("#main-wrapper").find('.counter').removeClass("red");
+            $(this).parentsUntil("#main-wrapper").find(".counter").removeClass("red");
         }
 
-        $(this).parentsUntil("#main-wrapper").find('.counter').text(counterVal);
+        $(this).parentsUntil("#main-wrapper").find(".counter").text(counterVal);
     })
+
 });

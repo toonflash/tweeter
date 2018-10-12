@@ -17,21 +17,18 @@ html {
 body {
   margin: 0;
   color: #244751;
-  background-color: #eee;
+  background-color: #eeeeee;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
- .red {
+.red {
    color: red;
  }
 
 .container {
    width: 450px;
    margin: 80px auto 0;
-   background-color: #fff;
+   padding-top: 30px;
+   background-color: #ffffff;
    overflow: auto;
  }

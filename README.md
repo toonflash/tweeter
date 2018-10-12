@@ -19,3 +19,7 @@ This repository is the starter code for the project: Students will fork and clon
 - Chance
 - MongoDB
 - MD5
+
+!["Screenshot description"](https://github.com/toonflash/tweeter/blob/master/docs/1%20-%20tweeter-load.jpg)
+!["Screenshot description"](https://github.com/toonflash/tweeter/blob/master/docs/2%20-%20tweeter-type.jpg)
+!["Screenshot description"](https://github.com/toonflash/tweeter/blob/master/docs/3%20-%20tweeter-submit.jpg)
